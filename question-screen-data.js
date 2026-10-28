@@ -177,8 +177,8 @@ window.QUESTION_SCREEN_SESSION = {
           type: "video",
           kicker: "Vídeo",
           title: "Os Tipos de Transpaleteiras e a Opção Manual",
-          playerId: "panda-e20f3380-d348-4cf1-8636-820dc621e19f",
-          embed: "https://player-vz-d35edf2a-8e7.tv.pandavideo.com.br/embed/?v=e20f3380-d348-4cf1-8636-820dc621e19f"
+          playerId: "panda-ed64aaa2-8266-4985-8983-dd11c38aeb97",
+          embed: "https://player-vz-d35edf2a-8e7.tv.pandavideo.com.br/embed/?v=ed64aaa2-8266-4985-8983-dd11c38aeb97"
         },
         {
           id: "nr11-m2-eletricas",
