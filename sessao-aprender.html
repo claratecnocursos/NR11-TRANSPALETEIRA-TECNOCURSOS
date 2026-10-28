@@ -1083,16 +1083,19 @@
     var globalPos = globalN ? (globalN + ' / ' + globalTotal) : ('— / ' + globalTotal);
     var chip = document.getElementById('pageChip');
     if (chip) {
-      if (mode !== 'play' || modIndex < 0) {
+      var lessonTotal = 0;
+      var lessonN = 0;
+      for (var pi = 0; pi < catalog.length; pi++) {
+        if (catalog[pi].view !== 'play') continue;
+        lessonTotal++;
+        if (mode === 'play' && catalog[pi].mi === modIndex && catalog[pi].si === slideIndex) lessonN = lessonTotal;
+      }
+      if (!lessonN) {
         chip.hidden = true;
       } else {
-        var list = screens();
-        var total = list.length || 1;
-        var n = Math.min(total, (slideIndex | 0) + 1);
-        if (showingResult) n = total;
         chip.hidden = false;
-        chip.textContent = n + ' / ' + total;
-        chip.title = 'Tela do módulo';
+        chip.textContent = lessonN + ' / ' + lessonTotal;
+        chip.title = 'Página do treinamento';
       }
     }
     var posEl = document.getElementById('simJumpPos');
